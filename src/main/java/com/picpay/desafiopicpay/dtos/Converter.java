@@ -38,16 +38,15 @@ public class Converter {
         return userResponse;
     }
 
-    public TransacaoEntity paraTransacaoEntity(TransacaoRequest request) {
-
-        TransacaoEntity entity = new TransacaoEntity();
-
-        entity.setValor(request.valor());
-        entity.setData(request.data());
-        entity.setPagador(request.pagador().getPagador());
-        entity.setRecebedor(request.lojista().getRecebedor());
-        return entity;
-    }
+//    public TransacaoEntity paraTransacaoEntity(TransacaoRequest request) {
+//
+//        TransacaoEntity entity = new TransacaoEntity();
+//
+//        entity.setValor(request.valor());
+//        entity.setPagador(request.pagador());
+//        entity.setRecebedor(request.lojista());
+//        return entity;
+//    }
 
     public TransacaoResponse paraResponse(TransacaoEntity entity) {
 
