@@ -45,6 +45,11 @@ public class UserEntity {
     public UserEntity() {
     }
 
+    public Long getId(){
+
+        return id;
+    }
+
     public String getNome() {
         return nome;
     }

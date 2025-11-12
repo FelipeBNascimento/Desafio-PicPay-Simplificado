@@ -38,6 +38,11 @@ public class TransacaoEntity {
     public TransacaoEntity() {
     }
 
+    public Long getId(){
+
+        return id;
+    }
+
     public BigDecimal getValor() {
         return valor;
     }
