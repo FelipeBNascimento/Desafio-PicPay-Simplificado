@@ -2,11 +2,9 @@ package com.picpay.desafiopicpay.controller;
 
 import com.picpay.desafiopicpay.business.TransacaoService;
 import com.picpay.desafiopicpay.dtos.requests.TransacaoRequest;
+import com.picpay.desafiopicpay.dtos.responses.TransacaoResponse;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/transacao")
@@ -26,5 +24,11 @@ public class TransacaoController {
 
         return ResponseEntity.ok().build();
 
+    }
+
+    @GetMapping
+    public ResponseEntity<TransacaoResponse> visualizarTransacao(@RequestParam Long id){
+
+        return ResponseEntity.ok(transacaoService.buscarTransacoes(id));
     }
 }
